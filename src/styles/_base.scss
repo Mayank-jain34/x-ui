@@ -1,0 +1,118 @@
+
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  .x-bg-#{$name} {
+    background: $color;
+  }
+}
+
+/* Button styles */
+.x-btn {
+  padding: 15px 30px;
+  margin: 2px;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  text-transform: capitalize;
+  border: 3px solid;
+  font-size: 15px; 
+  cursor: pointer;
+}
+
+.x-btn:disabled {
+  pointer-events: none;
+  cursor: none;
+  opacity: .5;
+}
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  .x-btn-#{$name} {
+    background: $color;
+    border-color: $color; 
+  }
+}
+
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  .x-btn-outline-#{$name} {
+    background: transparent;
+    border-color: $color;
+    color: $color; 
+  }
+}
+
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  .x-btn-invisible-#{$name} {
+    background: transparent;
+    border-color: transparent;
+    color: $color; 
+  }
+}
+
+
+/* Toast styles */
+
+.x-toast {
+  padding: 30px;
+  padding-right: 0px;
+  width: 500px;
+  border-left: 10px solid $primary;
+  margin: 2px;
+  color: white;
+  font-size: 19px;
+}
+
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  $colorShade : nth($colorGroup,2);
+  .x-toast-#{$name} {
+    border-color: $colorShade;
+    background: $color;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      color: $colorShade;
+      font-weight: 800;
+      padding: 0px 30px;
+    }
+  }
+}
+
+.x-accordion {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  .x-accordion-header {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    font-size: 19px;
+  }
+  .x-accordion-body {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+
+@each $name, $colorGroup in $colorsMap {
+  $color : nth($colorGroup,1);
+  $colorShade : nth($colorGroup,2);
+  .x-accordion-header-#{$name} {
+    border: 1px solid $colorShade;
+    background: $color;
+    button {
+      color: $colorShade;
+      font-size: 20px;
+      padding: 0px;
+    }
+  }
+  .x-accordion-body-#{$name} {
+    border: 1px solid $colorShade;
+  }
+}

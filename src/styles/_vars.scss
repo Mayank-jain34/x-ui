@@ -1,0 +1,28 @@
+$primary : #5D9CEC;
+$secondary : #EC87C0;
+$ternary: #48CFAD;
+$success : #A0D468;
+$warning : #FFCE54;
+$error : #ED5565;
+$light : #CCD1D9;
+$dark : #656D78;
+
+$primaryShade : #175cb8;
+$secondaryShade : #d93295;
+$ternaryShade : #249378;
+$successShade : #6ab21c;
+$warningShade : #cd8e0e;
+$errorShade : #ae2431;
+$lightShade : #AAB2BD;
+$darkShade : #434A54;
+
+$colorsMap: (
+        primary: $primary $primaryShade,
+        secondary: $secondary $secondaryShade,
+        ternary: $ternary $ternaryShade,
+        dark: $dark $darkShade,
+        error: $error $errorShade,
+        light: $light $lightShade,
+        warning: $warning $warningShade,
+        success: $success $successShade,        
+        );
